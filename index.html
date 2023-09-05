@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Font Family and icon -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+<!-- Main CSS by w3.css -->
+<link rel="stylesheet" href="w3.css">
+<style>
+
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-orange w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>เมนูอาหาร</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">หน้าหลัก</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รูปภาพเมนู</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">1. ส้มตำ</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">2. ลาบ</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">3. ก้อย</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">4. อ่อม</a>
+    <a href="#contact1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">5. แกงหน่อไม้ใบย่านาง</a>
+    <a href="#contact2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">6. ข้าวจี่</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">&#9776;</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>6 เมนูอาหารอีสาน</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>สุดแซ่บที่พลาดไม่ได้</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <center><h1 class="w3-xxxlarge w3-text-red"><b>1. ส้มตำ</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/kitchenconcrete.jpg" width="50%">
+    <p>เมนูที่ทุกคนทั่วโลกรู้จักจานนี้มาในหลากหลายรูปแบบ ลูกอีสานบางคนยืนยันว่าส้มตำจะขาดปลาร้าไม่ได้ แต่หัวใจของจานนี้อยู่ที่เส้นมะละกอดิบที่ต้องสดกรอบ ก่อนนำมาตำกับมะเขือเทศ พริก และกระเทียม ตำปลาร้าฉบับอีสานแท้ ๆ โดดเด่นด้วยกลิ่นแรงจากปลาร้า รสนัวจากมะกอก และความกรอบจากเม็ดกระถิน ถ้าใจยังไม่ถึงพออาจลองตำไทยที่คนภาคกลางนำมาปรับให้กินได้ง่ายขึ้นก่อนได้ รสชาติออกเปรี้ยวหวานจากน้ำตาลปี๊บและน้ำมะนาว ผสานรสเค็มจากน้ำปลาและกุ้งแห้ง ความกรอบก็ยังมีอยู่ แต่ใช้ถั่วลิสงแทนเม็ดกระถิน นอกจากตำปลาร้าและตำไทยแล้ว ยังมีตำซั่ว (ส้มตำผสมเส้นขนมจีน) ตำข้าวโพด ตำแตง ตำผลไม้ และอื่น ๆ ตามแต่ร้านจะสร้างสรรค์ ทุกแบบเพิ่มความอร่อยได้ด้วยการจกคู่ข้าวเหนียวหรือขนมจีน
+    </p></center>
+  </div><br>
+  
+
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <center><h1 class="w3-xxxlarge w3-text-red"><b>2. ลาบ</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/livingroom.jpg" width="50%">
+    <p>อาหารอีสานขึ้นชื่ออีกจาน ทำจากเนื้อสัตว์บดคลุกกับข้าวคั่ว หอมแดง ต้นหอม ใบสะระแหน่ เสริมรสด้วยพริก น้ำมะนาว และน้ำปลาหรือปลาร้า เนื้อที่ใช้โดยมากจะเป็นหมู วัว ไก่ หรือเป็ด แต่บางพื้นที่ก็ใช้เนื้อสัตว์ที่หาได้ในท้องถิ่นอีกด้วย นอกจากนี้ ยังมีเมนูลาบเลือดที่ผสมเลือดวัวหรือหมูสด เช่นเดียวกับอาหารอีสานอื่น ๆ นอกจากนั้นคนไทยยังชอบรับประทานลาบคู่กับข้าวเหนียวนึ่ง ในปัจจุบันบางร้านยังมีเมนูลาบทอดที่นำวัตถุดิบลาบมาปั้นเป็นก้อนกลมแล้วนำไปทอดกรอบ เกิดเป็นลาบทอดแสนอร่อยด้วย</p></center>
+  </div><br><br><br>
+
+
+
+
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <center><h1 class="w3-xxxlarge w3-text-red"><b>3. ก้อย</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/livingroom.jpg" width="50%">
+    <p>ถ้าเปรียบเมนูนี้กับวัฒนธรรมอาหารฝั่งตะวันตก เราคงเรียกเมนูนี้ว่า ทาร์ทาร์ (tartare) ในแบบฉบับอีสาน ก้อยคือเนื้อดิบสับหรือหั่นเป็นชิ้นเล็ก ๆ แล้วนำไปคลุกเคล้ากับเครื่องเทศและผัก เนื้อที่ใช้ทำมีทั้งวัว ควาย กวาง ปลา กุ้ง หรือแม้แต่ไข่มดแดง ส่วนผสมอื่น ๆ จะเหมือนกับลาบ และแน่นอนว่าต้องกินคู่กับข้าวเหนียวร้อน ๆ เพื่อให้ซึมซับประสบการณ์อาหารอีสานอย่างเต็มที่</p></center>
+  </div><br><br><br>
+  
+
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <center><h1 class="w3-xxxlarge w3-text-red"><b>4. อ่อม</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/atrium.jpg" width="50%">
+    <p>แกงกะหรี่แดนอีสาน ทำจากน้ำพริกโขลกสด ๆ แคลอรี่น้อยเพราะไร้กะทิ ความอร่อยอยู่ที่ผักสดตามฤดูกาลที่นำมาทำ ใส่เนื้อได้หลากหลายทั้งไก่ กบ หมู ปลาดุก หรือหอยทาก พริกแกงผสานรสชาติจากทั้งกระเทียม หอมแดง ตะไคร้ และพริก แล้วเสริมกลิ่นอันเป็นเอกลักษณ์ด้วยผักชีลาวและใบแมงลัก บางสูตรจะระบุไว้ชัดเจนว่าเนื้อชนิดไหนใช้คู่กับผักอะไร</p></center>
+  </div><br><br><br>
+
+
+  <div class="w3-container" id="contact1" style="margin-top:75px">
+    <center><h1 class="w3-xxxlarge w3-text-red"><b>5. แกงหน่อไม้ใบย่านาง</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/diningroom.jpg" width="50%">
+    <p>แกงอีสานแสนอร่อยนี้ เหมาะสำหรับคนที่กำลังลดน้ำหนัก เพราะเป็นแกงที่ไม่ใส่กะทิ อันดับแรก นำหน่อไม้สดมาต้มเพื่อกำจัดรสขม ก่อนนำไปต้มรวมกับพริกแกงสีเขียวจากใบย่านาง แล้วเสริมความข้นด้วยข้าวเบือที่โขลกไว้ ใส่เครื่องแกงอื่น ๆ ที่เตรียมไว้ทั้งพริกขี้หนูและหอมแดง และปลาร้าเพื่อเพิ่มรส นอกจากนี้ยังสามารถใส่ผักตามฤดูกาลเพิ่มรสชาติได้อีกด้วย</p></center>
+  </div><br><br><br>
+
+
+  <div class="w3-container" id="contact2" style="margin-top:75px">
+    <center><h1 class="w3-xxxlarge w3-text-red"><b>6. ข้าวจี่</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/livingroom2.jpg" width="50%">
+    <p>ข้าวจี่ตำรับอีสานคือข้าวเหนียวอัดเป็นแผ่นกลมหรือก้อนรี ชุบไข่ผสมเกลือแล้วนำไปย่าง เป็นภูมิปัญญาการถนอมข้าว<br>เหนียวไม่ให้เสียเพราะอากาศแสนร้อน</p></center>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
